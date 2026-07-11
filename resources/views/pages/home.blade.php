@@ -71,7 +71,7 @@
                         <span class="h-px w-12 bg-dragon-red"></span>
                         <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em]">
                             The Verification Standard
-                            @if (! empty($company['contact']['locations']))
+                            @if (! empty($company['contact']['locations'] ?? null))
                                 | {{ implode(' - ', $company['contact']['locations']) }}
                             @endif
                         </span>
@@ -315,7 +315,7 @@
         <div class="border-t border-outline-variant py-8 px-margin-mobile lg:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <span class="font-label-caps text-label-caps text-on-tertiary-fixed-variant">© {{ date('Y') }} {{ strtoupper($company['name']) }}. {{ strtoupper($company['tagline']) }}.</span>
             <div class="flex flex-wrap gap-8 font-label-caps text-label-caps">
-                @foreach ($company['contact']['locations'] as $location)
+                @foreach ($company['contact']['locations'] ?? [] as $location)
                     <span class="text-on-surface-variant">{{ strtoupper($location) }}</span>
                 @endforeach
             </div>

@@ -14,8 +14,8 @@
             '@type' => 'Organization',
             'name' => $company['parent_group'],
         ],
-        'email' => $company['contact']['email'],
-        'areaServed' => $company['contact']['locations'],
+        'email' => $company['contact']['email'] ?? null,
+        'areaServed' => $company['contact']['locations'] ?? [],
         'knowsAbout' => $company['services'],
         'makesOffer' => array_map(fn ($service) => [
             '@type' => 'Offer',
