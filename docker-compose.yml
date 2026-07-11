@@ -1,0 +1,41 @@
+# Victor Vanguard International - local development stack
+# Usage:
+#   docker compose up --build        # boots the app at http://localhost:8080
+#   docker compose run --rm node npm run dev   # optional: Vite HMR on :5173
+services:
+  # PHP-FPM: runs Laravel (SQLite)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vvi_app
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      node:
+        condition: service_completed_successfully
+
+  # Nginx: serves public/ and proxies PHP to the app service
+  web:
+    image: nginx:1.27-alpine
+    container_name: vvi_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+
+  # Node: installs JS deps and builds front-end assets (Tailwind v3 + SCSS via Vite).
+  # Runs once on `up`; for hot-reload use: docker compose run --rm node npm run dev -- --host 0.0.0.0
+  node:
+    image: node:22-alpine
+    container_name: vvi_node
+    working_dir: /var/www/html
+    command: sh -c "npm install && npm run build"
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "5173:5173"

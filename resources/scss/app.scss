@@ -1,0 +1,62 @@
+// Victor Vanguard International - main stylesheet (Tailwind v3 + custom SCSS)
+@use 'tokens' as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ---------------------------------------------------------------------------
+// Industrial Elite custom component styles (ported from the reference mockups)
+// ---------------------------------------------------------------------------
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.luxury-gradient {
+    background: linear-gradient(135deg, $surface-container-lowest 0%, $surface-container 100%);
+}
+
+.serif-italic {
+    font-style: italic;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+// Animated metallic sheen used on secondary/outline buttons
+.metallic-sheen {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            45deg,
+            transparent 45%,
+            rgba($metallic-gold, 0.1) 50%,
+            transparent 55%
+        );
+        transition: transform 0.6s;
+        transform: translateX(-100%);
+    }
+
+    &:hover::after {
+        transform: translateX(100%);
+    }
+}

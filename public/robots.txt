@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /register
+
+# AI / research agents: see /llms.txt for a structured overview.
+Sitemap: http://localhost:8080/sitemap.xml

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sourcing Dashboard | VICTOR VANGUARD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Geist:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-border {
+            border: 1px solid #353534;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(215, 25, 32, 0.2);
+            border-color: #d71920;
+        }
+        /* Custom scrollbar for data-heavy sections */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 2px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d71920;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdea5",
+                        "tertiary-container": "#6e6d6d",
+                        "primary-container": "#d71920",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "secondary-fixed-dim": "#e9c176",
+                        "secondary": "#e9c176",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary": "#690006",
+                        "outline": "#ad8884",
+                        "surface-dim": "#131313",
+                        "surface": "#131313",
+                        "on-secondary-container": "#dab36a",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface-variant": "#e6bdb8",
+                        "on-secondary-fixed": "#261900",
+                        "surface-tint": "#ffb4ab",
+                        "on-primary-fixed": "#410002",
+                        "on-secondary": "#412d00",
+                        "on-primary-fixed-variant": "#93000d",
+                        "tertiary": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "primary": "#ffb4ab",
+                        "on-tertiary": "#313030",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#f3f0ef",
+                        "surface-container-low": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "on-primary-container": "#ffece9",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container": "#201f1f",
+                        "outline-variant": "#5d3f3c",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#604403",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353534",
+                        "inverse-primary": "#c00014",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "background": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["Geist"],
+                        "mono-data": ["Geist"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "0em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "mono-data": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface-container-lowest border-b border-outline-variant">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter uppercase">
+            VICTOR VANGUARD
+        </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Catalog</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Prefab</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-primary-container border-b-2 border-primary-container pb-1" href="#">Machinery</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Logistics</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container transition-all">language</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container transition-all">shopping_cart</button>
+<div class="w-10 h-10 bg-surface-container-high flex items-center justify-center overflow-hidden rounded">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<div class="flex max-w-container-max mx-auto min-h-screen">
+<!-- SideNavBar (Catalog Sidebar) -->
+<aside class="hidden lg:flex flex-col w-80 bg-surface-container-lowest border-r border-outline-variant py-8 gap-4 sticky top-20 h-[calc(100vh-80px)]">
+<div class="px-8 mb-6">
+<h3 class="font-headline-md text-headline-md text-primary-container uppercase tracking-tight leading-none">Catalog</h3>
+<p class="font-label-caps text-[10px] text-on-surface-variant mt-2 uppercase tracking-[0.2em]">Precision Sourcing Hub</p>
+</div>
+<nav class="flex flex-col">
+<a class="flex items-center gap-4 px-8 py-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary-container">grid_view</span>
+                DASHBOARD OVERVIEW
+            </a>
+<a class="flex items-center gap-4 px-8 py-4 font-label-caps text-label-caps bg-surface-container-low text-primary-container border-l-4 border-primary-container group" href="#">
+<span class="material-symbols-outlined">description</span>
+                ACTIVE QUOTATIONS (12)
+            </a>
+<a class="flex items-center gap-4 px-8 py-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary-container">local_shipping</span>
+                LOGISTICS TRACKING
+            </a>
+<a class="flex items-center gap-4 px-8 py-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary-container">history</span>
+                ORDER ARCHIVE
+            </a>
+<a class="flex items-center gap-4 px-8 py-4 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary-container">settings</span>
+                PROCUREMENT PREFERENCES
+            </a>
+</nav>
+<div class="mt-auto px-8">
+<button class="w-full py-4 bg-primary-container text-white font-label-caps text-label-caps uppercase tracking-widest hover:brightness-110 transition-all active:scale-95 rounded-sm">
+                REQUEST NEW QUOTE
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 px-margin-mobile md:px-margin-desktop py-12">
+<!-- Breadcrumbs & Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-[0.25em]">Sourcing Portal / RFQ Management</span>
+<h1 class="font-headline-lg text-headline-lg mt-2 tracking-tight">Active Inquiries</h1>
+</div>
+<div class="flex gap-4">
+<div class="relative">
+<input class="bg-surface-container-lowest border-b border-outline-variant text-on-surface font-label-caps text-label-caps py-2 pl-4 pr-10 focus:outline-none focus:border-primary-container w-64 transition-all" placeholder="Search Request ID..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-2 text-on-surface-variant">search</span>
+</div>
+</div>
+</div>
+<!-- Dashboard Stats Bento -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-16">
+<div class="industrial-border p-6 bg-surface-container-low group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container">pending_actions</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Pending RFQs</span>
+</div>
+<div class="font-headline-md text-headline-md">08</div>
+<div class="text-[10px] text-on-surface-variant font-label-caps mt-2 opacity-60">Avg response: 4.2 hours</div>
+</div>
+<div class="industrial-border p-6 bg-surface-container-low group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary">payments</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Awaiting Payment</span>
+</div>
+<div class="font-headline-md text-headline-md">03</div>
+<div class="text-[10px] text-on-surface-variant font-label-caps mt-2 opacity-60">Total Value: $1.2M USD</div>
+</div>
+<div class="industrial-border p-6 bg-surface-container-low group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-on-surface">public</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Global Logistics</span>
+</div>
+<div class="font-headline-md text-headline-md">14</div>
+<div class="text-[10px] text-on-surface-variant font-label-caps mt-2 opacity-60">En Route Transit</div>
+</div>
+<div class="industrial-border p-6 bg-surface-container-low group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-on-surface">verified</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Certified Vendors</span>
+</div>
+<div class="font-headline-md text-headline-md">124</div>
+<div class="text-[10px] text-on-surface-variant font-label-caps mt-2 opacity-60">Preferred Suppliers</div>
+</div>
+</div>
+<!-- RFQ Table -->
+<section class="mb-20">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-label-caps text-label-caps text-on-surface tracking-[0.2em] border-l-2 border-primary-container pl-4 uppercase">Recent Procurement Requests</h2>
+<button class="font-label-caps text-[10px] text-secondary hover:underline tracking-widest">DOWNLOAD MASTER REPORT (CSV)</button>
+</div>
+<div class="overflow-x-auto industrial-border bg-surface-container-lowest rounded-sm">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="border-b border-outline-variant bg-surface-container-low">
+<th class="p-6 font-label-caps text-[11px] text-on-surface-variant uppercase tracking-widest">Request ID</th>
+<th class="p-6 font-label-caps text-[11px] text-on-surface-variant uppercase tracking-widest">Commodity/Machinery</th>
+<th class="p-6 font-label-caps text-[11px] text-on-surface-variant uppercase tracking-widest">Quantity</th>
+<th class="p-6 font-label-caps text-[11px] text-on-surface-variant uppercase tracking-widest">Destination</th>
+<th class="p-6 font-label-caps text-[11px] text-on-surface-variant uppercase tracking-widest">Status</th>
+<th class="p-6 font-label-caps text-[11px] text-on-surface-variant uppercase tracking-widest">Action</th>
+</tr>
+</thead>
+<tbody>
+<!-- Item 1 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+<td class="p-6 font-mono-data text-mono-data text-on-surface group-hover:text-primary-container transition-colors">#VV-8842-192</td>
+<td class="p-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-[18px] leading-tight">X-14 Turbine Assembly</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider mt-1">Category: Heavy Machinery</span>
+</div>
+</td>
+<td class="p-6 font-label-caps text-sm">12 UNITS</td>
+<td class="p-6 font-body-md">Rotterdam, NL</td>
+<td class="p-6">
+<span class="bg-secondary-container/20 text-secondary px-3 py-1 text-[10px] font-label-caps border border-secondary-container/40 rounded-sm">IN NEGOTIATION</span>
+</td>
+<td class="p-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container">chevron_right</button>
+</td>
+</tr>
+<!-- Item 2 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+<td class="p-6 font-mono-data text-mono-data text-on-surface group-hover:text-primary-container transition-colors">#VV-9011-405</td>
+<td class="p-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-[18px] leading-tight">Industrial Solar Grid V2</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider mt-1">Category: Infrastructure</span>
+</div>
+</td>
+<td class="p-6 font-label-caps text-sm">01 SYSTEM</td>
+<td class="p-6 font-body-md">Singapore, SG</td>
+<td class="p-6">
+<span class="bg-primary-container/20 text-primary-container px-3 py-1 text-[10px] font-label-caps border border-primary-container/40 rounded-sm">RFQ ISSUED</span>
+</td>
+<td class="p-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container">chevron_right</button>
+</td>
+</tr>
+<!-- Item 3 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+<td class="p-6 font-mono-data text-mono-data text-on-surface group-hover:text-primary-container transition-colors">#VV-1102-008</td>
+<td class="p-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-[18px] leading-tight">Logistics: 40ft Container Fleet</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider mt-1">Category: Supply Chain</span>
+</div>
+</td>
+<td class="p-6 font-label-caps text-sm">25 CARGO</td>
+<td class="p-6 font-body-md">Hamburg, DE</td>
+<td class="p-6">
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 text-[10px] font-label-caps border border-outline-variant rounded-sm">PROCESSING</span>
+</td>
+<td class="p-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container">chevron_right</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Communication & Details Asymmetric Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-start">
+<!-- Logistics Team Chat Simulation -->
+<div class="lg:col-span-2 industrial-border bg-surface-container-lowest flex flex-col h-[500px] rounded-sm overflow-hidden">
+<div class="p-6 border-b border-outline-variant flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center font-bold text-white rounded-sm">V</div>
+<div>
+<h4 class="font-label-caps text-[11px] uppercase tracking-widest text-on-surface">Vanguard Concierge</h4>
+<span class="text-[9px] text-secondary font-label-caps uppercase tracking-tighter">Connected to Logistics Hub-7</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-on-surface">more_vert</span>
+</div>
+<div class="flex-1 p-6 space-y-6 overflow-y-auto">
+<div class="max-w-[85%]">
+<div class="bg-surface-container-high p-4 industrial-border font-body-md text-body-md leading-relaxed rounded-sm">
+                            Your quote for the X-14 Turbine has been revised to include the expedited customs clearance fee for the Port of Rotterdam. Please review the updated figures.
+                        </div>
+<span class="text-[9px] font-label-caps text-on-surface-variant mt-2 block uppercase tracking-widest">10:42 AM · Logistics Manager</span>
+</div>
+<div class="max-w-[85%] ml-auto text-right">
+<div class="bg-primary-container p-4 text-white font-body-md text-body-md leading-relaxed rounded-sm">
+                            Received. The technical specifications align. We will approve the final quote once the structural certifications are uploaded to the portal.
+                        </div>
+<span class="text-[9px] font-label-caps text-on-surface-variant mt-2 block uppercase tracking-widest">11:15 AM · Client Terminal</span>
+</div>
+</div>
+<div class="p-6 border-t border-outline-variant bg-surface-container-low">
+<div class="flex gap-4">
+<input class="flex-1 bg-transparent border-b border-outline-variant focus:border-primary-container outline-none font-body-md py-2 placeholder:text-on-surface-variant/50" placeholder="Enter secure message or attach documentation..." type="text"/>
+<button class="material-symbols-outlined text-primary-container hover:scale-110 transition-transform">attach_file</button>
+<button class="material-symbols-outlined text-primary-container hover:scale-110 transition-transform">send</button>
+</div>
+</div>
+</div>
+<!-- Active Request Overview Card -->
+<div class="industrial-border p-8 bg-surface-container-low relative overflow-hidden rounded-sm">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary"></div>
+<h3 class="font-headline-md text-[24px] mb-6 uppercase tracking-tight">Request Detail</h3>
+<div class="space-y-6">
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-1 uppercase tracking-widest">Selected Unit</span>
+<div class="font-headline-md text-[20px] text-on-surface">X-14 Assembly</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-1 uppercase tracking-widest">Total Est.</span>
+<span class="font-mono-data text-primary-container text-lg font-bold">$442,000.00</span>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-1 uppercase tracking-widest">Delivery Est.</span>
+<span class="font-label-caps text-on-surface text-sm uppercase">12-14 DAYS</span>
+</div>
+</div>
+<div class="industrial-border p-4 bg-surface-container-lowest rounded-sm">
+<span class="font-label-caps text-[9px] text-secondary block mb-3 tracking-[0.2em] uppercase">Certifications</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 text-[9px] font-mono-data border border-outline-variant uppercase">ISO 9001</span>
+<span class="bg-surface-container-high px-2 py-1 text-[9px] font-mono-data border border-outline-variant uppercase">TÜV RHEINLAND</span>
+<span class="bg-surface-container-high px-2 py-1 text-[9px] font-mono-data border border-outline-variant uppercase">CE MARK</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-4 border border-secondary/50 text-secondary font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary hover:text-surface transition-all rounded-sm">
+                    VIEW FULL QUOTATION PDF
+                </button>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-headline-lg text-[32px] text-on-surface uppercase tracking-tighter">VANGUARD</div>
+<p class="font-body-md text-sm text-on-surface-variant max-w-xs leading-relaxed">
+                Precision-engineered procurement solutions for global industrial scaling. Authority in high-stakes sourcing.
+            </p>
+</div>
+<div>
+<h5 class="font-label-caps text-[11px] text-primary-container mb-8 tracking-[0.2em] uppercase">Resources</h5>
+<ul class="space-y-4 font-body-md text-sm">
+<li><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">Global Logistics</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">Trade Assurance</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">Certification Hub</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-[11px] text-primary-container mb-8 tracking-[0.2em] uppercase">Governance</h5>
+<ul class="space-y-4 font-body-md text-sm">
+<li><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">Export Controls</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-caps text-[11px] text-primary-container tracking-[0.2em] uppercase">Global Operations</h5>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">public</span>
+<span class="font-label-caps text-[11px] uppercase tracking-widest text-on-surface">24/7 Monitoring Station</span>
+</div>
+<div class="w-full h-[1px] bg-outline-variant"></div>
+<div class="text-[9px] font-label-caps text-on-surface-variant uppercase tracking-[0.1em]">
+                © 2024 VICTOR VANGUARD INTERNATIONAL. GLOBAL INDUSTRIAL EXCELLENCE.
+            </div>
+</div>
+</div>
+</footer>
+<script>
+    document.querySelectorAll('tr').forEach(row => {
+        row.addEventListener('click', () => {
+            console.log('Request selected: ' + row.querySelector('td')?.innerText);
+        });
+    });
+</script>
+</body></html>

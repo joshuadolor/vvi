@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Victor Vanguard International | Industrial Excellence</title>
+<!-- Fonts: Bodoni Moda (Display/Headline), Hanken Grotesk (Body), Geist (Label/Mono) -->
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:wght@300;400;700&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffdea5",
+                    "tertiary-container": "#6e6d6d",
+                    "primary-container": "#d71920",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "secondary-fixed-dim": "#e9c176",
+                    "secondary": "#e9c176",
+                    "on-surface": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-primary": "#690006",
+                    "outline": "#ad8884",
+                    "surface-dim": "#131313",
+                    "surface": "#131313",
+                    "on-secondary-container": "#dab36a",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#e6bdb8",
+                    "on-secondary-fixed": "#261900",
+                    "surface-tint": "#ffb4ab",
+                    "on-primary-fixed": "#410002",
+                    "on-secondary": "#412d00",
+                    "on-primary-fixed-variant": "#93000d",
+                    "tertiary": "#c8c6c5",
+                    "on-background": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-bright": "#3a3939",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "primary": "#ffb4ab",
+                    "on-tertiary": "#313030",
+                    "primary-fixed": "#ffdad6",
+                    "on-tertiary-container": "#f3f0ef",
+                    "surface-container-low": "#1c1b1b",
+                    "error": "#ffb4ab",
+                    "primary-fixed-dim": "#ffb4ab",
+                    "on-primary-container": "#ffece9",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "surface-container": "#201f1f",
+                    "outline-variant": "#5d3f3c",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-container": "#604403",
+                    "inverse-on-surface": "#313030",
+                    "surface-variant": "#353534",
+                    "inverse-primary": "#c00014",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "background": "#131313",
+                    "dragon-red": "#d71920",
+                    "metallic-gold": "#e9c176"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "container-max": "1440px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Bodoni Moda"],
+                    "headline-lg": ["Bodoni Moda"],
+                    "headline-md": ["Bodoni Moda"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["Geist"],
+                    "mono-data": ["Geist"]
+            },
+            "fontSize": {
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "0em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "mono-data": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #0e0e0e 0%, #201f1f 100%);
+        }
+        .metallic-sheen {
+            position: relative;
+            overflow: hidden;
+        }
+        .metallic-sheen::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 45%, rgba(233, 193, 118, 0.1) 50%, transparent 55%);
+            transition: transform 0.6s;
+            transform: translateX(-100%);
+        }
+        .metallic-sheen:hover::after {
+            transform: translateX(100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Custom Serif Italic for Dragon Red accents */
+        .serif-italic {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-dragon-red selection:text-white">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface-container-lowest border-b border-outline-variant">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter" href="#">
+    VICTOR <span class="text-dragon-red">VANGUARD</span>
+</a>
+<div class="hidden md:flex items-center gap-8 font-label-caps text-label-caps uppercase">
+<a class="text-dragon-red border-b-2 border-dragon-red pb-1" href="#">Catalog</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Prefab</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Solar</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Machinery</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Logistics</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Support</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center border-b border-outline-variant px-2 py-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-caps font-label-caps placeholder:text-outline-variant w-32" placeholder="SKU / SERIES" type="text"/>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:bg-surface-container-highest p-2 transition-all duration-300 rounded-sm">
+<span class="material-symbols-outlined">language</span>
+</button>
+<button class="hover:bg-surface-container-highest p-2 transition-all duration-300 rounded-sm">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button class="hover:bg-surface-container-highest p-2 transition-all duration-300 rounded-sm relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-dragon-red rounded-full"></span>
+</button>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 animate-[pulse_10s_infinite]" data-alt="Industrial landscape at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3cCU7IgxIlBQqBXk8Pb7vIWt1apEIb87S3YRiTOGwgo7j2Lmb2ruDnO9j4L0mRXsRyfWt0avYuc5gDwFDKLSBrpE_XJznuFUWf6LrIeLjyA6vt_U-qxqY0NFFr3GVlmnU_9cKSqWkv48T1Fi5rsoGQ_p7I6_qDsXMc2048_5HDSTg6OdqqlP83WRkeAOtJ-hSa07XB6BporDoJqz7Th8WRBXzNJ6qHGgPmNMFcNdiFA0BRp33IOmuGjwvj5fgUDbJALk_ZEaTcVM')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl space-y-8">
+<div class="flex items-center gap-4">
+<span class="h-[1px] w-12 bg-dragon-red"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em]">Established 1984 | Shenzhen - Hong Kong</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-[1.1]">
+    GLOBAL <br/> INDUSTRIAL <br/> <span class="serif-italic text-dragon-red">EXCELLENCE.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+    Superior procurement and logistics for the heavy infrastructure sector. Precision-engineered solutions delivered with the sophistication of luxury trade.
+</p>
+<div class="flex items-center gap-6 pt-4">
+<button class="bg-dragon-red text-white font-label-caps text-label-caps px-10 py-5 uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+    Explore Catalog
+</button>
+<button class="border border-secondary text-secondary font-label-caps text-label-caps px-10 py-5 uppercase tracking-widest hover:bg-secondary hover:text-surface-container-lowest transition-all metallic-sheen">
+    Our Network
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 bg-surface-container-low p-12 hidden lg:block border-t border-l border-outline-variant">
+<div class="grid grid-cols-2 gap-12">
+<div>
+<div class="font-label-caps text-label-caps text-dragon-red mb-2">OPERATIONAL REACH</div>
+<div class="font-headline-md text-headline-md">142 COUNTRIES</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-dragon-red mb-2">SOURCING POWER</div>
+<div class="font-headline-md text-headline-md">$14.2B AUM</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Bento Grid -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Core Infrastructure</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">End-to-end industrial asset management.</p>
+</div>
+<a class="font-label-caps text-label-caps uppercase border-b border-dragon-red text-dragon-red pb-1" href="#">View All Categories</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+<div class="md:col-span-8 group relative overflow-hidden border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Prefabricated structure detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIvelpEoTkK7jwYFlm8y1OPss74xzCxbiSrEJ3XWDnwppYGRGSlK3p6suMu_5zvtIPiP6BbKQKoqWnTCqkGjAPa6xO7IVbh783XW2V-NK4XUBVN_G2gPxfB622BFFU4S1eC7862zz5FP0o1H1aCknbsFs_0wOsaL8RnkPiDTAbzF9Hpm4vZuCyPN5oBrLoV39wNTQ4B0Zt_XE24aXPB83bZZoL3qy9t7atjsufsctf-4gOxbCFycNLk-7UvlD9Z9TvNiT4Zd_ta98')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
+<div class="absolute bottom-10 left-10">
+<span class="font-label-caps text-label-caps text-dragon-red mb-4 block">SERIES V-8</span>
+<h3 class="font-headline-md text-headline-md text-white">Prefabricated Structures</h3>
+<p class="font-body-md text-on-surface-variant max-w-md mt-2">Rapid-deployment modular complexes for hostile environments.</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Solar farm overhead" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlJ4kfeUracW7rXD4VDdvBuAr3v6ss1N5mwZ0uZQqfhhdSyMDi0-mYU5XP-Z6FMpR9eoyJXJABg9A5d7KyzF7kG-GyoWgr23C9zltNIYFhmT6AXapHMO7QUoA8T04LvBzQCNdY4i5Y0MOEj9rm0Acx1NNjTj4KipOeTRpV55RcXuC9YM7mqLOQyicKsNESMvAMjjv8HtMyYFy6xK6ThzawSAej4T6aknhToW27LfDAprJeN7D5DgsY8owfPyEoBFqr9ayUeZVk6bU')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
+<div class="absolute bottom-10 left-10">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">ENERGY ASSETS</span>
+<h3 class="font-headline-md text-headline-md text-white">Solar Infrastructure</h3>
+<button class="mt-4 w-10 h-10 border border-white flex items-center justify-center rounded-full text-white hover:bg-white hover:text-black transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Vanguard - Trust Section -->
+<section class="bg-surface-container-lowest py-32 border-y border-outline-variant">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-12">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Vanguard Advantage</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Bridging the gap between China's manufacturing power and global industrial demand with uncompromising transparency.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-dragon-red text-4xl">verified_user</span>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface">Verified Sourcing</h4>
+<p class="text-sm font-body-md text-on-surface-variant">On-site inspections at the highest level of Tier-1 manufacturing facilities in China.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-dragon-red text-4xl">public</span>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface">Global Logistics</h4>
+<p class="text-sm font-body-md text-on-surface-variant">Priority trade routes and customs clearance expedited via Victor Vanguard's private network.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-dragon-red text-4xl">balance</span>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface">Trade Assurance</h4>
+<p class="text-sm font-body-md text-on-surface-variant">Unrivaled legal and financial protection for multi-million dollar industrial procurement.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-dragon-red text-4xl">architecture</span>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface">Custom Engineering</h4>
+<p class="text-sm font-body-md text-on-surface-variant">In-house design team for modifications to machinery and structural specifications.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square border border-outline-variant p-8 relative overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center" data-alt="Industrial office interior" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1PxWTuRPpNgxrNElgQN1urKUut94fU1sh6hDRZHTheV2uivlSxqFXQ6-LSzEk-SZbzC126nQtWCYRqzOF5wOi4TZz-y0cjTJQvyXtwyoO3wfRZcE1wVzSI9Bo5XRNxOzdZqP193cZRVFLIBYU1cxC9uI4WGYtkT43XAXs3eVEcfcEkOMKAdRJxWKHkofWbX3i7ojxR9tlv8g8v11uRJrEvTxZgy0VBIJil46r9HdJUgB8oQGselNEmuVzsSa_CixuSPJdzzGT358')"></div>
+<div class="absolute inset-0 bg-dragon-red/5 mix-blend-overlay"></div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 border-r border-b border-secondary opacity-50"></div>
+</div>
+</div>
+</section>
+<!-- Featured Equipment Carousel -->
+<section class="py-24 overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto mb-12 flex justify-between items-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Featured Equipment</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:border-on-surface transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:border-on-surface transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter px-margin-desktop overflow-x-auto hide-scrollbar pb-12">
+<!-- Card 1 -->
+<div class="min-w-[400px] border border-outline-variant group bg-surface-container-low">
+<div class="h-80 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Industrial generator" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDy1HNj1K2avXj4mZF61K2fGlI6Wt_n1azHktstg6hBEwTEFLfw2JkdIqmnwD6XZ4c7xzQ8g7wP14gI3ie4znNljVlAt0sShGZXuT60zpHzcJ4shgG9zmFdPdccb3KDHQcdPV3Lh7DMv3fIItNu660J9hbgP99kL9F__q36TXkYVLdZt---4eVkRPbdzzlRyKJz3Jd73Ythhc3-X2N3Ru6X5osxtqOXdjv_n9VASLhvzpu9GLwbdTjDU0T97ibbqG-89IdP5-jWPHU')"></div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-2 py-1">CERTIFIED HEAVY DUTY</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant">VV-900X</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Vanguard Power Gen III</h4>
+<div class="h-[1px] w-full bg-outline-variant"></div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">PRICE UPON REQUEST</span>
+<button class="text-dragon-red font-label-caps text-label-caps uppercase flex items-center gap-2 group-hover:underline">
+    DETAILS <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[400px] border border-outline-variant group bg-surface-container-low">
+<div class="h-80 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Robotic arm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2m5lU3BC7I_3I01OVI_QMphZtHs1yDZ0bq7VwsLZ7QvuPBQ52OQ-VYvFYhCkp3wuQ2CpaNTXDubQknVUwZk-oD4IIT-i2hvnIT6oxITJYxKbvu2QxMlICXGmPI5ggu6RwL_QwtRNKJzE_PN2SkBaOxbpfecoxJmknuFXjVW68KeKzGgdnS0f5z_FF_IEFItLHJrOr6_NKHJnNsxlm3uzhyCyM-SS3UQI0uibQJY1jutCjHUhxkglhbO51NeMhONCDMndXW4duK6E')"></div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-2 py-1">PRECISION LINE</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant">VV-ROBO-4</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Automation Core S-2</h4>
+<div class="h-[1px] w-full bg-outline-variant"></div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">PRICE UPON REQUEST</span>
+<button class="text-dragon-red font-label-caps text-label-caps uppercase flex items-center gap-2 group-hover:underline">
+    DETAILS <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[400px] border border-outline-variant group bg-surface-container-low">
+<div class="h-80 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modular data hub" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_T5CQETro3lOoTEGFAfMvzBx-0EOTcJY_99EViCav8HmOdSEZer2iVxtN7iXZK-7IZuxYR5hq3dn1FC3mA2k9k79tgb-ZhEcuQL4UnLJMLsNnHnU6bCsqscTjCtbY7CLPs4Ff5pmi5NG18H2iDGwUtYxAII2tfbjHwQkPWMs2XvOmyi5AYzTJ105zP2BWqQ1icj87MNrQ98m1XO39IsMPUKjepeXmRnuEKfItSr5rQtK1qS4HPbhGeNPggWMIPn9NSquGlHWqbH8')"></div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-2 py-1">INFRASTRUCTURE</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant">VV-DATA-MOD</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Modular Hub V2</h4>
+<div class="h-[1px] w-full bg-outline-variant"></div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">PRICE UPON REQUEST</span>
+<button class="text-dragon-red font-label-caps text-label-caps uppercase flex items-center gap-2 group-hover:underline">
+    DETAILS <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 luxury-gradient border-y border-outline-variant">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center space-y-10">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface">Secure Your Industrial Future</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+    Request a custom consultation for your global procurement needs. Our expert logistics and sourcing teams are standing by.
+</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+<button class="bg-dragon-red text-white font-label-caps text-label-caps px-12 py-6 uppercase tracking-widest hover:brightness-110 transition-all w-full sm:w-auto">
+    REQUEST QUOTE
+</button>
+<button class="text-on-surface border-b border-on-surface font-label-caps text-label-caps px-4 py-2 uppercase tracking-widest hover:text-dragon-red hover:border-dragon-red transition-all">
+    Talk to a Specialist
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="font-headline-lg text-headline-lg text-on-surface">VICTOR VANGUARD</div>
+<p class="font-body-md text-on-surface-variant text-sm pr-8 leading-relaxed">
+    Global leaders in industrial procurement, precision engineering, and tactical logistics. Elevating industry to an art form since 1984.
+</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:border-dragon-red text-on-surface-variant hover:text-dragon-red transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:border-dragon-red text-on-surface-variant hover:text-dragon-red transition-all" href="#">
+<span class="material-symbols-outlined text-lg">podcasts</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Solutions</h5>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Prefabricated Units</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Solar Systems</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Heavy Machinery</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Custom Fabrication</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Services</h5>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Global Logistics</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Trade Assurance</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Quality Control</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Sourcing Audit</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Company</h5>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Certification</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-label-caps text-label-caps text-on-tertiary-fixed-variant">© 2024 VICTOR VANGUARD INTERNATIONAL. GLOBAL INDUSTRIAL EXCELLENCE.</span>
+<div class="flex gap-8 font-label-caps text-label-caps">
+<span class="text-on-surface-variant">SHENZHEN HQ</span>
+<span class="text-on-surface-variant">HONG KONG</span>
+<span class="text-on-surface-variant">LONDON</span>
+<span class="text-on-surface-variant">NEW YORK</span>
+</div>
+</div>
+</footer>
+<!-- FAB -->
+<button class="fixed bottom-10 right-10 bg-dragon-red text-white w-16 h-16 rounded-none shadow-2xl flex items-center justify-center group hover:scale-110 active:scale-95 transition-all z-[100]">
+<span class="material-symbols-outlined text-3xl">chat_bubble</span>
+<span class="absolute right-full mr-4 bg-surface-container-low text-on-surface px-4 py-2 font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-outline-variant">CONSULT SPECIALIST</span>
+</button>
+</body></html>

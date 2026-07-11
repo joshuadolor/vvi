@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VICTOR VANGUARD | Premium Modular Prefab Office</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(20, 19, 19, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .industrial-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #201f1f 1px, transparent 1px), linear-gradient(to bottom, #201f1f 1px, transparent 1px);
+        }
+        .sheen-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .sheen-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(233, 193, 118, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        .sheen-effect:hover::after {
+            left: 100%;
+            top: 100%;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdea5",
+                        "tertiary-container": "#6e6d6d",
+                        "primary-container": "#d71920",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "secondary-fixed-dim": "#e9c176",
+                        "secondary": "#e9c176",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary": "#690006",
+                        "outline": "#ad8884",
+                        "surface-dim": "#131313",
+                        "surface": "#131313",
+                        "on-secondary-container": "#dab36a",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface-variant": "#e6bdb8",
+                        "on-secondary-fixed": "#261900",
+                        "surface-tint": "#ffb4ab",
+                        "on-primary-fixed": "#410002",
+                        "on-secondary": "#412d00",
+                        "on-primary-fixed-variant": "#93000d",
+                        "tertiary": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "primary": "#ffb4ab",
+                        "on-tertiary": "#313030",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#f3f0ef",
+                        "surface-container-low": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "on-primary-container": "#ffece9",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container": "#201f1f",
+                        "outline-variant": "#5d3f3c",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#604403",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353534",
+                        "inverse-primary": "#c00014",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "background": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Bodoni Moda"],
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["Geist"],
+                        "mono-data": ["Geist"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "0em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "mono-data": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface-container-lowest border-b border-surface-variant glass-panel">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-display-lg text-2xl md:text-3xl font-bold text-on-surface tracking-tighter">
+            VICTOR VANGUARD
+        </div>
+<div class="hidden lg:flex items-center gap-8 font-label-caps text-[10px] uppercase tracking-[0.2em]">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Catalog</a>
+<a class="text-primary-container border-b border-primary-container pb-1" href="#">Prefab</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Solar</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Machinery</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Logistics</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Support</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary-container transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary-container transition-colors" data-icon="account_circle">account_circle</span>
+<div class="relative cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface group-hover:text-primary-container transition-colors" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-primary-container text-[10px] w-4 h-4 flex items-center justify-center rounded-full text-white font-bold">2</span>
+</div>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20 industrial-grid">
+<!-- Product Header & Breadcrumbs -->
+<div class="mb-12">
+<nav class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface-variant mb-6 uppercase tracking-[0.2em]">
+<a class="hover:text-primary-container transition-colors" href="#">Industrial Catalog</a>
+<span class="material-symbols-outlined text-[12px]" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary-container transition-colors" href="#">Prefabricated Structures</a>
+<span class="material-symbols-outlined text-[12px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface">Vanguard Series X-1</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<h1 class="font-display-lg text-4xl md:text-6xl text-white mb-2 leading-none">VANGUARD SERIES X-1</h1>
+<p class="font-headline-md text-xl md:text-2xl text-secondary italic opacity-90">The Definitive Modular Executive Workspace</p>
+</div>
+<div class="flex flex-col items-start md:items-end">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1 tracking-[0.2em]">UNIT STARTING FROM</span>
+<span class="font-headline-md text-3xl md:text-4xl font-bold text-primary-container">$124,500.00 <span class="text-sm font-normal text-on-surface-variant tracking-normal">USD</span></span>
+</div>
+</div>
+</div>
+<!-- Hero Gallery Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[600px] md:h-[800px] mb-20">
+<div class="md:col-span-3 md:row-span-2 relative group overflow-hidden border border-surface-variant shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="An expansive exterior shot of a modern, modular prefabricated office unit featuring floor-to-ceiling glass panels and sleek matte black steel framing. The structure is set in a high-end corporate park at dusk, with warm amber lighting glowing from the interior. The design aesthetic is clean, industrial-luxury, dominated by deep charcols and metallic accents, conveying authority and precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCniV2bizRejleihIfUJU8K2yssVbreFxeL2hBZ5eGiJqxIsPQz6WiayrrGnYFqn0hvLPAEQsVc7j-eFUTEJzc9_wOE7Xyy6n9sRB_jJj1LyvAQY1i6qWaMlDb2v-_mn2o84myP8qJe0YT0q588z4m5SaRt_bddXS23ogQrUQhxtjydp-ezj9HL4-1TrCsIjj1akZzZLRwr2IgPnjjGRx3C5Kkc9WLBMdy9kRoirRMs-FOXSpG1Xj9rUM75t9piK_K9-IUgOMf-SZ0')">
+</div>
+<div class="absolute bottom-8 left-8 glass-panel px-8 py-5 border border-surface-variant">
+<span class="font-label-caps text-[10px] text-primary-container block mb-1 tracking-[0.3em]">EXTERIOR VIEW 01</span>
+<p class="text-white font-bold text-lg">Aerospace-Grade Steel Hull</p>
+</div>
+</div>
+<div class="relative group overflow-hidden border border-surface-variant shadow-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="Interior perspective of a premium modular office showcasing minimalist luxury furniture, a solid oak executive desk, and smart glass partitions. The lighting is soft and recessed, emphasizing a high-contrast palette of obsidian black walls and brushed gold hardware. The atmosphere is quiet, professional, and technologically sophisticated, following the Victor Vanguard industrial aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuQyiOQTqjw90NUgsW4cal0k9xmwIuBJOlSFqJ_o1gGIvAvO5tU8-0YJ-FHgfkKFVy1Zml8b5DT0XeNTgxYExfaon3X1rMQyxcsvFaruKRctaFQ1qfTGEQzFRezf8_7yeIdVlTnnLQzZ6u6ZCM2og7Q4Fo02YRgfQncO7mY49glxwwZYNSg6KrVMesj-e6g2Ig4Fj-mXZekjoTuy22IslSWkPfCaxD4_pMYuuQLrG82I7Ys5a9UKz1O_jNwM-cmVjvrBA5bc6qknY')">
+</div>
+</div>
+<div class="relative group overflow-hidden border border-surface-variant shadow-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="Macro detail shot of the precision-engineered interlocking joints of a modular structure, highlighting the brushed metallic finish and heavy-duty industrial bolts. The lighting is dramatic and focused, creating sharp highlights on the metallic gold accents and deep shadows in the charcoal recesses. This image communicates durability, technical excellence, and high-stakes manufacturing quality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjUXkTc3jwtZKXEIGPyU7nSmAJO64Dw4xn2fBSgR2UymJL86w-cwd2UIWuoC8zTbAqzFCxKZKD9mI-G8egmtJ5eX1540pVHixV8GUfu9fBH5HiYFphJgCQJxGxJn-ELmRWKf-eKXVfxUVcDDTI03GftVCUYq7mQ0NYpB_EIiLFLtYxUMCF2FTuV9H8cxvcWJH_RVYVzKPxLoDTU3yZ3SC6dV6co7zy_EDjqtlON0JWdET-DIXA9nQCV4rd2Jvu32SlQwA6lsgzKc0')">
+</div>
+<div class="absolute inset-0 bg-surface-container-lowest/40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-white mb-2" data-icon="grid_view">grid_view</span>
+<span class="font-label-caps text-[10px] text-white tracking-[0.3em]">VIEW GALLERY (+12)</span>
+</div>
+</div>
+</section>
+<!-- Product Details Split -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-20 mb-32">
+<!-- Technical Specs (Left) -->
+<div class="lg:col-span-2">
+<h2 class="font-headline-lg text-3xl border-b border-surface-variant pb-6 mb-10 text-white tracking-tight uppercase">Engineering Specifications</h2>
+<div class="space-y-12">
+<p class="font-body-lg text-lg text-on-surface-variant leading-relaxed font-light">
+                    The Series X-1 represents the pinnacle of rapidly deployable infrastructure. Engineered for the global executive, each unit features autonomous climate control, ballistic-grade glazing options, and a carbon-fiber reinforced frame capable of withstanding extreme environmental conditions. 
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+<div class="group">
+<span class="font-label-caps text-[10px] text-secondary block mb-4 tracking-[0.25em] uppercase opacity-80 group-hover:opacity-100 transition-opacity">Dimensions (External)</span>
+<div class="flex justify-between items-baseline border-b border-surface-variant/40 pb-4">
+<span class="font-headline-md text-2xl text-white italic">12.2m x 3.6m x 3.2m</span>
+<span class="font-mono-data text-[10px] text-on-surface-variant uppercase tracking-widest">L / W / H</span>
+</div>
+</div>
+<div class="group">
+<span class="font-label-caps text-[10px] text-secondary block mb-4 tracking-[0.25em] uppercase opacity-80 group-hover:opacity-100 transition-opacity">Weight Class</span>
+<div class="flex justify-between items-baseline border-b border-surface-variant/40 pb-4">
+<span class="font-headline-md text-2xl text-white italic">18,500 KG</span>
+<span class="font-mono-data text-[10px] text-on-surface-variant uppercase tracking-widest">Equipped</span>
+</div>
+</div>
+<div class="group">
+<span class="font-label-caps text-[10px] text-secondary block mb-4 tracking-[0.25em] uppercase opacity-80 group-hover:opacity-100 transition-opacity">Power Systems</span>
+<div class="flex justify-between items-baseline border-b border-surface-variant/40 pb-4">
+<span class="font-headline-md text-2xl text-white italic">Vanguard Solar Lithium</span>
+<span class="font-mono-data text-[10px] text-on-surface-variant uppercase tracking-widest">Hybrid UPS</span>
+</div>
+</div>
+<div class="group">
+<span class="font-label-caps text-[10px] text-secondary block mb-4 tracking-[0.25em] uppercase opacity-80 group-hover:opacity-100 transition-opacity">Climate Control</span>
+<div class="flex justify-between items-baseline border-b border-surface-variant/40 pb-4">
+<span class="font-headline-md text-2xl text-white italic">HEPA H14 Filtration</span>
+<span class="font-mono-data text-[10px] text-on-surface-variant uppercase tracking-widest">Dual-Zone</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low border border-surface-variant p-10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-primary-container opacity-20 text-7xl" data-icon="verified">verified</span>
+</div>
+<h3 class="font-label-caps text-[10px] text-white mb-8 tracking-[0.4em] uppercase">Certifications &amp; Compliance</h3>
+<ul class="space-y-6 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-4 group">
+<span class="material-symbols-outlined text-secondary text-xl group-hover:scale-110 transition-transform" data-icon="check_circle">check_circle</span>
+<span class="tracking-wide">ISO 9001:2015 Industrial Fabrication Standard</span>
+</li>
+<li class="flex items-center gap-4 group">
+<span class="material-symbols-outlined text-secondary text-xl group-hover:scale-110 transition-transform" data-icon="check_circle">check_circle</span>
+<span class="tracking-wide">ASTM E84 Fire Safety Class A Rated</span>
+</li>
+<li class="flex items-center gap-4 group">
+<span class="material-symbols-outlined text-secondary text-xl group-hover:scale-110 transition-transform" data-icon="check_circle">check_circle</span>
+<span class="tracking-wide">LEED Platinum Structural Efficiency</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Side Form / CTA (Right) -->
+<div class="lg:col-span-1">
+<div class="sticky top-32 bg-surface-container border border-surface-variant p-10 shadow-2xl">
+<h3 class="font-headline-md text-2xl text-white mb-3">Request Proposal</h3>
+<p class="font-body-md text-on-surface-variant mb-10 leading-relaxed text-sm opacity-80">Secure your unit allocation for the Q4 fabrication window. Dedicated account managers respond within 6 hours.</p>
+<form class="space-y-8">
+<div class="space-y-2 group">
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-[0.2em] transition-colors group-focus-within:text-primary-container">Full Name / Organization</label>
+<input class="w-full bg-surface-container-lowest border-b border-surface-variant focus:border-primary-container outline-none py-3 text-white transition-all font-label-caps text-[11px] px-1" placeholder="ALEXANDER VANCE" type="text"/>
+</div>
+<div class="space-y-2 group">
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-[0.2em] transition-colors group-focus-within:text-primary-container">Business Email</label>
+<input class="w-full bg-surface-container-lowest border-b border-surface-variant focus:border-primary-container outline-none py-3 text-white transition-all font-label-caps text-[11px] px-1" placeholder="VANCE@VANGUARD.INT" type="email"/>
+</div>
+<div class="space-y-2 group">
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-[0.2em] transition-colors group-focus-within:text-primary-container">Deployment Location</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-b border-surface-variant focus:border-primary-container outline-none py-3 text-white transition-all font-label-caps text-[11px] px-1" placeholder="CITY, COUNTRY" type="text"/>
+<span class="material-symbols-outlined absolute right-1 top-3 text-on-surface-variant text-sm opacity-50" data-icon="public">public</span>
+</div>
+</div>
+<div class="space-y-2 group">
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-[0.2em] transition-colors group-focus-within:text-primary-container">Unit Configuration</label>
+<select class="w-full bg-surface-container-lowest border-b border-surface-variant focus:border-primary-container outline-none py-3 text-white transition-all font-label-caps text-[11px] appearance-none px-1">
+<option>Series X-1 Standard Executive</option>
+<option>Series X-1 Off-Grid Hybrid</option>
+<option>Series X-1 Reinforced Tactical</option>
+</select>
+</div>
+<button class="w-full bg-primary-container hover:bg-on-primary-fixed-variant text-white font-label-caps text-xs py-6 tracking-[0.4em] transition-all sheen-effect mt-6 shadow-lg shadow-primary-container/10">
+                        INITIALIZE REQUEST
+                    </button>
+<p class="text-center font-label-caps text-[9px] text-on-surface-variant mt-6 tracking-widest opacity-60">
+                        BY SUBMITTING, YOU AGREE TO VICTOR VANGUARD'S <a class="underline hover:text-white transition-colors" href="#">TERMS OF GLOBAL TRADE</a>.
+                    </p>
+</form>
+</div>
+</div>
+</div>
+<!-- Logistics Section -->
+<section class="mb-32 border-t border-surface-variant pt-24">
+<div class="flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-3xl text-white mb-8 uppercase tracking-tighter italic">Global Deployment Chain</h2>
+<p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed font-light">
+                    Our integrated logistics network ensures white-glove delivery to any coordinate on the globe. From deep-sea freight to heavy-lift helicopter positioning, Victor Vanguard manages the entire deployment chain with absolute precision.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+<div class="flex gap-5">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="local_shipping">local_shipping</span>
+<div>
+<h4 class="font-label-caps text-white text-[11px] mb-2 tracking-[0.2em] uppercase font-bold">Intermodal</h4>
+<p class="text-[11px] text-on-surface-variant leading-relaxed opacity-80">Compatible with standard 40ft HQ rail &amp; sea networks globally.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="map">map</span>
+<div>
+<h4 class="font-label-caps text-white text-[11px] mb-2 tracking-[0.2em] uppercase font-bold">Real-Time</h4>
+<p class="text-[11px] text-on-surface-variant leading-relaxed opacity-80">Live telemetry tracking from factory to site foundation placement.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 aspect-video border border-surface-variant relative shadow-2xl overflow-hidden group">
+<div class="absolute inset-0 grayscale opacity-40 mix-blend-screen scale-110 group-hover:scale-100 transition-transform duration-[3s]" data-alt="A stylized technical map showing global logistics routes across a dark charcoal world map. Shipping lines are rendered in glowing dragon red and metallic gold, connecting major industrial hubs. The aesthetic is HUD-inspired, high-tech, and minimal, reinforcing the global reach of the Victor Vanguard logistics network." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtcY3l5KKKjHSh7HhyRPfSY32V0FMU9Jjg_1O1g3Zt9Pjz-MR4PrrZ_nXqjy9CnkBu9FgqREVN0rSUbIyVwd8uaYVyI6g3EofIHqehedllIiHryENwXdnqE35b38HwqiWXZiSzDM5RQmrRVfKDhjrsonpzAbzmyYiXhQghd_gmW6bKp6NA9ax1SSdXhwtuxumo5aTPUfsqeW3mojEFETommKgxB3YNHovJ8wN6gUH1fZH6qPDzc7TXI8192CNph6guC5K95_cUDLo')"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+<div class="bg-primary-container p-5 rounded-full mb-6 animate-pulse shadow-2xl shadow-primary-container/40">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="location_on">location_on</span>
+</div>
+<span class="font-headline-md text-2xl text-white italic mb-1">Factory Status: Active</span>
+<span class="font-label-caps text-secondary text-[10px] tracking-[0.4em]">HUB: ROTTERDAM SECTOR 4</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Items Bento -->
+<section class="mb-20">
+<h3 class="font-headline-lg text-2xl text-white mb-12 border-b border-surface-variant pb-6 tracking-tight uppercase">Complementary Infrastructure</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="border border-surface-variant group cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors duration-500">
+<div class="h-72 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="An industrial solar array system designed for modular buildings, featuring large matte-black photovoltaic panels on a rigid steel frame. The image is shot in high-contrast morning light, emphasizing the metallic textures and technological precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjASpryLhRtG8ybO3cM23XjDjvFuHl3Ch56ALB76XC-_cBRAHOX2FuP6_aoGnJngrUgwaWe1kcb6b33Pyezt7vWxJBj9EhYA9ChuFfzidyHkiad32LbJu1R_UgaQ7S0ld5nxSKbs15qOQMvdYEoVin-PcGSsAfZFRZ2iKDWkM4RXaLz1bUo-iPSdE-y-BWl6WNVjKGoJ_pYcXCTVEVpBuGo0JIaZY985l2ZyqjnW8AxchMV26DnMH5aw4XzBfpEfzFouAf8Yl9qfw')"></div>
+<div class="absolute top-5 left-5">
+<span class="bg-surface-container-lowest/90 text-secondary px-4 py-1.5 font-label-caps text-[9px] border border-secondary/30 tracking-[0.2em] uppercase">Solar Systems</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-xl text-white mb-3 italic">Solar Array Grid X-5</h4>
+<div class="flex justify-between items-center border-t border-surface-variant pt-4 mt-2">
+<span class="font-mono-data text-primary-container font-bold">$42,000.00</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-2 transition-transform text-lg" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="border border-surface-variant group cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors duration-500">
+<div class="h-72 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Heavy-duty machinery trailer specifically designed for transporting modular offices. The trailer is industrial charcoal with gold identification plates and oversized heavy-duty tires. Dramatic low-angle lighting highlights its robust construction." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAix7EkKHlGM8rXdhPeATKVX63SfWjc4XZ0OHhfUqw5bMN1H_cry76wQZ3L-R6Vq2tmKjN9ST2s_UioenmuuqYukRaI7yqvF2H-QybqoLoVbjFdQQH3swWEWjbZakqFKB_tVnslsumNBcevAauAQp9mNDg6Z13fn96lQLbQJqZFDe5xamEVPvTDHlFiamFLQC4NF9fOCPO-aqWPZ6kNlx3VHdT9ON8GBhFwmVfpj44ATnN4jvN1F5pz7szK2hxsNNPOsaRzwzss7-Q')"></div>
+<div class="absolute top-5 left-5">
+<span class="bg-surface-container-lowest/90 text-secondary px-4 py-1.5 font-label-caps text-[9px] border border-secondary/30 tracking-[0.2em] uppercase">Logistics</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-xl text-white mb-3 italic">Heavy-Lift Trailer MT-9</h4>
+<div class="flex justify-between items-center border-t border-surface-variant pt-4 mt-2">
+<span class="font-mono-data text-primary-container font-bold">$18,500.00</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-2 transition-transform text-lg" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="border border-surface-variant group cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors duration-500">
+<div class="h-72 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Technical close-up of a high-performance HVAC filtration unit for modular environments. The unit features polished aluminum casing and digital interface displays. Industrial-luxury aesthetic with deep shadows and sharp highlights on metallic surfaces." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvZ5Tjcqj-SgELmpbCgsQkxgwtGZK0rW2WTYYnPBI35axcw4FMyb6VFEzYgbCxOFes6u9Tw0Bk4k7UdPfsrKnMfZJIJAOEiq1kxjZxLHXd1kOWfxgRE5zfn944FjQd04JEQsNeRGMNoWKarewWOarUW-uKl47p2UY02wodmNSUNjO4c4WL7QLApCSVJ_GelleErQ7Hnuzn_XWTV5r6lfulht-talvToWHC2WvyS-oZS3ah16G9NW3sMCiGHAJ-QJq9T2cnyPeCl8I')"></div>
+<div class="absolute top-5 left-5">
+<span class="bg-surface-container-lowest/90 text-secondary px-4 py-1.5 font-label-caps text-[9px] border border-secondary/30 tracking-[0.2em] uppercase">Support</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-xl text-white mb-3 italic">Climate Unit H-14</h4>
+<div class="flex justify-between items-center border-t border-surface-variant pt-4 mt-2">
+<span class="font-mono-data text-primary-container font-bold">$8,900.00</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-2 transition-transform text-lg" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-lowest border-t border-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-24 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-lg text-3xl text-on-surface mb-8 tracking-tighter">VICTOR VANGUARD</div>
+<p class="font-body-md text-on-surface-variant max-w-xs leading-relaxed opacity-80">Global leaders in prefabricated industrial excellence and high-stakes deployable infrastructure.</p>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-caps text-secondary mb-8 uppercase tracking-[0.3em] text-[10px]">Resources</h5>
+<ul class="space-y-5 font-body-md text-sm">
+<li><a class="text-on-surface-variant hover:text-white transition-all hover:translate-x-1 block" href="#">Global Logistics</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-all hover:translate-x-1 block" href="#">Trade Assurance</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-all hover:translate-x-1 block" href="#">Certification</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-caps text-secondary mb-8 uppercase tracking-[0.3em] text-[10px]">Legal</h5>
+<ul class="space-y-5 font-body-md text-sm">
+<li><a class="text-on-surface-variant hover:text-white transition-all hover:translate-x-1 block" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-all hover:translate-x-1 block" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-all hover:translate-x-1 block" href="#">Compliance</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-caps text-secondary mb-8 uppercase tracking-[0.3em] text-[10px]">Connect</h5>
+<div class="flex gap-6 mb-8">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors" data-icon="hub">hub</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors" data-icon="alternate_email">alternate_email</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors" data-icon="share">share</span>
+</div>
+<div class="font-label-caps text-[9px] text-on-surface-variant leading-relaxed tracking-widest opacity-60">
+                © 2024 VICTOR VANGUARD INTERNATIONAL.<br/>GLOBAL INDUSTRIAL EXCELLENCE.
+            </div>
+</div>
+</div>
+</footer>
+<script>
+    // Micro-interaction for form inputs
+    document.querySelectorAll('input, select').forEach(element => {
+        element.addEventListener('focus', () => {
+            const label = element.parentElement.querySelector('label');
+            if (label) label.style.color = '#d71920'; // primary-container
+        });
+        element.addEventListener('blur', () => {
+            const label = element.parentElement.querySelector('label');
+            if (label) label.style.color = ''; // Reset to tailwind class
+        });
+    });
+</script>
+</body></html>

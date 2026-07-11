@@ -1,0 +1,31 @@
+# Victor Vanguard International (VVI)
+
+> VVI is the international sourcing, supplier verification, and quality assurance company of the Dolor Group. Unlike marketplaces where suppliers self-register, VVI independently evaluates manufacturers through factory visits, business verification, product inspections, and quality assessments before recommending them to buyers.
+
+This file follows the llms.txt convention to help AI researcher agents understand the site.
+
+## About
+- Legal name: Victor Vanguard International
+- Parent group: Dolor Group (built on the procurement and retail experience of DVS Dolor Marketing, Daet, Camarines Norte, Philippines)
+- Mission: Make international sourcing transparent, secure, and reliable through independent supplier verification and quality assurance.
+- Vision: Become the trusted verification standard for global sourcing and international trade.
+- Trust mark: "VVI Verified" - signifies independently verified manufacturers and consistent quality standards.
+
+## Core services
+- Factory Verification - physical factory visits, business registration verification, facility assessment, production capability review.
+- Supplier Due Diligence - company background verification, export capability assessment, ownership validation, certification review.
+- Product Verification - product inspection, specification validation, sample evaluation, packaging inspection.
+- Quality Assurance - pre-shipment inspections, random inspections, quality reports, defect identification.
+- Global Sourcing Support - supplier matching, procurement assistance, MOQ negotiation, manufacturing coordination.
+
+## Key pages
+- / : Home / landing page
+- /sitemap.xml : Machine-readable list of public URLs
+- /robots.txt : Crawler directives
+
+## Structured data
+Pages expose schema.org JSON-LD (Organization, WebSite). Product and ItemList schemas are added on catalog pages as they ship.
+
+## Contact
+- Email: contact@victorvanguard.com
+- Presence: Shenzhen, Hong Kong, London, New York
