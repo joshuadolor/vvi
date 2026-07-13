@@ -23,6 +23,7 @@
                 {{-- Desktop links --}}
                 <div class="hidden md:flex items-center gap-8 font-label-caps text-label-caps uppercase h-20">
                     <a class="inline-flex items-center h-full border-b-2 border-dragon-red text-dragon-red transition-colors" href="#services" data-nav-link>Services</a>
+                    <a class="inline-flex items-center h-full border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors" href="#about" data-nav-link>Who We Are</a>
                     <a class="inline-flex items-center h-full border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors" href="#advantage" data-nav-link>Advantage</a>
                     <a class="inline-flex items-center h-full border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors" href="#catalog" data-nav-link>Catalog</a>
                     <a class="inline-flex items-center h-full border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors" href="#partners" data-nav-link>Partners</a>
@@ -51,6 +52,7 @@
         >
             <div class="flex flex-col font-label-caps text-label-caps uppercase px-margin-mobile py-4">
                 <a class="py-4 border-b border-outline-variant text-dragon-red" href="#services" data-nav-link data-mobile-nav-link>Services</a>
+                <a class="py-4 border-b border-outline-variant text-on-surface-variant hover:text-on-surface transition-colors" href="#about" data-nav-link data-mobile-nav-link>Who We Are</a>
                 <a class="py-4 border-b border-outline-variant text-on-surface-variant hover:text-on-surface transition-colors" href="#advantage" data-nav-link data-mobile-nav-link>Advantage</a>
                 <a class="py-4 border-b border-outline-variant text-on-surface-variant hover:text-on-surface transition-colors" href="#catalog" data-nav-link data-mobile-nav-link>Catalog</a>
                 <a class="py-4 text-on-surface-variant hover:text-on-surface transition-colors" href="#partners" data-nav-link data-mobile-nav-link>Partners</a>
@@ -133,6 +135,68 @@
                         <span class="font-label-caps text-label-caps text-secondary mb-4 block">QUALITY ASSURANCE</span>
                         <h3 class="font-headline-md text-headline-md text-white">Pre-Shipment Inspections</h3>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- Who We Are — copy only from provided source; no invented supporting text --}}
+        <section id="about" class="py-32 px-margin-mobile lg:px-margin-desktop max-w-container-max mx-auto border-y border-outline-variant">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                <aside class="lg:col-span-4 lg:sticky lg:top-28 self-start">
+                    <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-6">Who We Are</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Born from a Legacy of Trust</h2>
+                </aside>
+
+                <div class="lg:col-span-8 max-w-3xl space-y-20">
+                    <div class="space-y-8">
+                        <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                            Victor Vanguard International is not just a business; it is the evolution of a 54-year legacy of commercial excellence and unbreakable trust.
+                        </p>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Our founder comes from a family of ten siblings, all stakeholders in DVS Dolor Marketing Inc.—a legendary institution in the Bicol region of the Philippines (Daet, Camarines Norte). DVS Dolor Marketing was built from the ground up by a resilient, visionary mother who single-handedly turned a humble beginning into a regional powerhouse. Today, that single enterprise has blossomed into a diverse portfolio of successful businesses spanning all over Luzon, recognized as the premier destination for leading branded appliances and furniture.
+                        </p>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Growing up within this ecosystem, our founder learned firsthand that a company’s most valuable asset isn't its inventory—it is its reputation. In our family business, trust wasn't a marketing buzzword; it was the foundation of our existence, proven daily through an unwavering commitment to legendary after-sales service.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-8">Bringing High Standards to Global Trade</h3>
+                        <div class="space-y-8">
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                Steeped in a tradition where high standards, uncompromising quality, and justifiable spending govern every decision, Victor Vanguard International was founded to bring those exact values to the global B2B landscape.
+                            </p>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                We saw a world where businesses were losing time, money, and trust to unverified entities and corporate scams. Drawing from half a century of family business ethics, we decided to build a vanguard against that inefficiency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-10">Our Core Beliefs</h3>
+                        <dl class="border-t border-outline-variant">
+                            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-10 py-10 border-b border-outline-variant">
+                                <dt class="sm:col-span-4 font-label-caps text-label-caps uppercase text-on-surface tracking-widest pt-1">Reputation Above All</dt>
+                                <dd class="sm:col-span-8 font-body-md text-body-md text-on-surface-variant leading-relaxed">Just as our family business built its name over five decades on absolute integrity, we protect the reputations of the businesses we serve.</dd>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-10 py-10 border-b border-outline-variant">
+                                <dt class="sm:col-span-4 font-label-caps text-label-caps uppercase text-on-surface tracking-widest pt-1">Uncompromising Standards</dt>
+                                <dd class="sm:col-span-8 font-body-md text-body-md text-on-surface-variant leading-relaxed">We don't cut corners. From corporate history to physical factory audits, our verification process is rigorous and absolute.</dd>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-10 py-10 border-b border-outline-variant">
+                                <dt class="sm:col-span-4 font-label-caps text-label-caps uppercase text-on-surface tracking-widest pt-1">Justifiable Spending</dt>
+                                <dd class="sm:col-span-8 font-body-md text-body-md text-on-surface-variant leading-relaxed">We believe B2B commerce should be lean and secure. By eliminating the expensive, exhausting legwork of verification, we save your capital for what matters most: growth.</dd>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-10 py-10 border-b border-outline-variant">
+                                <dt class="sm:col-span-4 font-label-caps text-label-caps uppercase text-on-surface tracking-widest pt-1">The "After-Sales" Mentality</dt>
+                                <dd class="sm:col-span-8 font-body-md text-body-md text-on-surface-variant leading-relaxed">We don't just facilitate a connection and walk away. Our commitment to your security continues long after the initial vetting is done.</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                        We are the bridge between caution and confidence. We are Victor Vanguard International.
+                    </p>
                 </div>
             </div>
         </section>
@@ -299,6 +363,7 @@
             <div class="space-y-6">
                 <h5 class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Company</h5>
                 <ul class="space-y-3 font-body-md text-body-md">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">Who We Are</a></li>
                     <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#advantage">The Advantage</a></li>
                     <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#catalog">Verified Catalog</a></li>
                     <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#partners">Verified Partners</a></li>
